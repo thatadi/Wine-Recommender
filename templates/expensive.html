@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CellarScout.com</title>
+    <link rel="stylesheet" type="text/css" href='../static/style.css'>
+    <link rel="icon" type="image/jpg" href="'../static/wine-bottle.png">
+</head>
+<body>
+    
+    <nav class="topbar">
+        <h1>CellarScout</h1>
+        <ul>
+            <li><a href="/main">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=adityaryaka@gmail.com">Contact</a></li>
+        </ul>
+        
+    </nav>
+ 
+   
+    <div class="expensivecontainer">
+        
+        {% for i in range(0,4)%}
+        <div class="contentexpensive">
+            
+            <div class="cardsexpensive">
+                <img src="../static/floyd.jpg" alt=""><br>
+                
+                    <h4>{{title[i]}}</h4><br>
+                    <h4>${{price[i]}}</h4><br>
+                    <p1>Province-{{province[i]}}</p1>
+                
+               
+            </div>
+            
+        </div>
+        {% endfor %}
+        
+        
+    </div>
+    
+   
+    
+    
+    <div class="botbar">
+        <p1>Designed by Aditya</p1>
+    </div>
+
+</body>
+</html>

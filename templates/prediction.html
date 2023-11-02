@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CellarScout.com</title>
+    <link rel="stylesheet" type="text/css" href='../static/style.css'>
+    <link rel="icon" type="image/jpg" href="'../static/wine-bottle.png">
+</head>
+<body>
+    
+    <nav class="topbar">
+        <h1>CellarScout</h1>
+        <ul>
+            <li><a href="/main">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=adityaryaka@gmail.com">Contact</a></li>
+        </ul>
+        
+    </nav>
+    <div class="logincontainer ">
+        <div class="predictcontainer">
+            <form  method="POST" action="/recommendation">
+                <div class="log">
+                
+                        <label>Enter Wine Variety </label><br>
+                        <h1></h1>
+                        <div class="dropdown-search">
+                            <input type="text" id="search-box" name="search-box" placeholder="Search..." onclick="showDropdown()">
+                            <div class="dropdown-content" id="dropdown-list">
+                                {% for item in variety %}
+                                    <a href="#" onclick="selectOption('{{ item }}')">{{ item }}</a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                
+                </div>
+                <div class="log">
+                
+                        <button id="recommend">Recommend</button>
+                    
+                    
+                </div>
+            </form>
+        </div>
+        
+    </div>
+    
+    
+    <div class="botbar">
+        <p1>Designed by Aditya</p1>
+    </div>
+    
+   
+    <script>
+           function showDropdown() {
+            var dropdownList = document.getElementById("dropdown-list");
+            if (dropdownList.style.display === "block") {
+                dropdownList.style.display = "none";
+            } else {
+                dropdownList.style.display = "block";
+            }
+        }
+
+        function selectOption(optionText) {
+            var searchBox = document.getElementById("search-box");
+            searchBox.value = optionText;
+            var dropdownList = document.getElementById("dropdown-list");
+            dropdownList.style.display = "none";
+        }
+         document.getElementById("recommend").onclick=function(){
+            window.location.href="/recommendation"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CellarScout.com</title>
+    <link rel="stylesheet" type="text/css" href='../static/style.css'>
+    <link rel="icon" type="image/jpg" href='../static/wine-bottle.png'>
+    
+</head>
+<body>
+   
+    <nav class="topbar">
+        <h1>CellarScout</h1>
+        <ul>
+            <li id="help">Help</li>
+            <li id="forgot">Forgot Password</li>
+        </ul>
+        
+    </nav>
+    <div class="logincontainer ">
+        <div class="boxlogin">
+            <h1>Login</h1>
+            <div class="log">
+                
+                <label>Username </label><br>
+                <input type="text" id="loginusername" name="username" placeholder="username">
+            </div>
+            <div class="log">
+                
+                <label>Password </label><br>
+                <input type="text" id="loginpassword" name="password" placeholder="password">
+            </div>
+            <div class="log">
+            
+                    <button id="loginbutton">Login</button>
+                
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+    
+    <div class="botbar">
+        <p1>Designed by Aditya</p1>
+    </div>
+
+    <script>
+        document.getElementById("loginbutton").onclick = function () {
+        let us = document.getElementById("loginusername").value;
+        let ps = document.getElementById("loginpassword").value;
+
+        if (us && ps) {
+            
+            let storedUsernames = JSON.parse(localStorage.getItem("usernames"));
+            let storedPasswords = JSON.parse(localStorage.getItem("passwords"));
+
+            if (storedUsernames && storedPasswords) {
+                
+                let isValid = false;
+                for (let i = 0; i < storedUsernames.length; i++) {
+                    if (us === storedUsernames[i] && ps === storedPasswords[i]) {
+                        isValid = true;
+                        break;
+                    }
+                }
+
+                if (isValid) {
+                   
+                    window.location.href = "/main";
+                } else {
+                    alert("Invalid username or password.");
+                }
+            } else {
+                alert("No stored usernames and passwords found. Please sign up first.");
+            }
+        } else {
+            alert("Insufficient credentials.");
+        }
+    }
+      
+        document.getElementById("help").onclick=function(){alert("God Helps Those Who Help Themselves.")}
+        document.getElementById("forgot").onclick=function(){alert("Nothing can be done -Napolean")}
+    </script>
+</body>
+</html>

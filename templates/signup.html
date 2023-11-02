@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CellarScout.com</title>
+    <link rel="stylesheet" type="text/css" href='../static/style.css'>
+    <link rel="icon" type="image/jpg" href='../static/wine-bottle.png'>
+    
+</head>
+<body>
+   
+    <nav class="topbar">
+        <h1>CellarScout</h1>
+        <ul>
+            <li id="help">Help</li>
+            <li id="forgot">Forgot Password</li>
+        </ul>
+        
+    </nav>
+    <div class="logincontainer ">
+        <div class="boxlogin">
+            <h1>Create Credentials</h1>
+            <div class="log">
+                
+                <label>Create new username </label><br>
+                <input type="text" id="createusername" name="username" placeholder="create username">
+            </div>
+            <div class="log">
+                
+                <label>create new Password </label><br>
+                <input type="text" id="createpassword" name="password" placeholder="enter password">
+            </div>
+            <div class="log">
+            
+                    <button id="create">Create</button>
+                
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+    
+    <div class="botbar">
+        <p1>Designed by Aditya</p1>
+    </div>
+
+    <script>
+        
+        let usernames = ["aditya"];
+        let passwords = ["1234"];
+
+        document.getElementById("create").onclick=function(){
+            let us = document.getElementById("createusername").value;
+            let ps = document.getElementById("createpassword").value;
+
+            if (us && ps) {
+               
+                usernames.push(us);
+                passwords.push(ps);
+                localStorage.setItem("usernames", JSON.stringify(usernames));
+                localStorage.setItem("passwords", JSON.stringify(passwords));
+                
+                window.location.href = "/login";
+            } else {
+                alert("Insufficient credentials.");
+            }
+        }
+        document.getElementById("help").onclick=function(){alert("God Helps Those Who Help Themselves.")}
+        document.getElementById("forgot").onclick=function(){alert("default :  Username: aditya      password:1234")}
+    </script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+body{
+    margin: 0;
+    padding: 0;   
+     
+     
+}
+.topbar {
+    background-color:#865637;
+    width: 100%;
+    height: 80px;
+    margin-top: auto;
+    padding: auto;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.topbar h1{
+    padding-left: 20px;
+}
+.topbar ul {
+    display: flex;
+    list-style-type: none;
+    
+}
+.topbar li{
+    padding-right: 30px;
+    padding-left:30px ;
+    transition: background-color 0.5s, transform 0.3s;
+    
+}
+li a {
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.5s, transform 0.3s;
+}
+.topbar li:hover{
+    list-style-type: none;
+            color: white;
+            cursor: pointer;
+            transform:scale(1.15);
+}
+.topbar li a:hover{
+    list-style-type: none;
+    color: white;
+    cursor: pointer;
+}
+
+.botbar{
+    position:fixed;
+    background-color: black;
+    bottom:0;
+    height:60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+.botbar p1{
+    color: white;
+    padding: 20px;
+    
+}
+.botbar img{
+    height:20px;
+    width: 20px;
+    padding-top:16px;
+    padding-left: 10px;
+    transition: transform 0.3s;
+}
+.botbar img:hover{
+    transform:scale(1.35);
+}
+.containerindex{
+    height:100vh;
+    width:100%;
+    background-image: url(wallpaper2wine.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.logincontainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background-image: url(wallpaper2wine.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow:hidden;
+    
+}
+.boxlogin{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:350px;
+    width:350px;
+    background-color:white ;
+    border-radius: 12px;
+}
+.log{
+    padding:10px;
+    
+}
+.log button{
+    width:150px;
+    height:40px;
+    background-color:#865637;
+    border-radius: 12px;;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.log button:hover{
+    background-color: #82808f;
+    cursor: pointer;
+    transform:scale(1.05);
+}
+.log input{
+    
+        width: 200px;
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+.content{
+    height:400px;
+    width:300px;
+    background-color:snow;
+    padding:30px;
+    margin:80px;
+    border-radius: 12px;
+    display: inline-flexbox;
+}
+
+.cards img{
+    height: 100%;
+    width:100%;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    transition: transform 0.3s;
+   
+}
+.cards img:hover{
+transform: scale(1.05);
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  height:100vh;
+  width:100%;
+  background-image: url(wallpaper2wine.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+ 
+}
+.cards button{
+    border-radius: 12px;
+    background-color:#cc0000 ;
+    border-width: 0px;
+    transition: background-color 0.3s, transform 0.3s;
+    
+}
+.cards button:hover{
+    cursor: pointer;
+    background-color: pink;
+    box-shadow: #82808f;
+    border-width: 2px;
+    border-color: darkred;
+    transform: scale(1.05);
+}
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons li{
+    text-decoration: none;
+}
+button{
+    width:200px;
+    height:50px;
+}
+.about{
+    padding: 20px;
+    height:100%;
+    background-color:pink;
+    width:100%;
+}
+
+.predictcontainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:250px;
+    width:350px;
+    background-color:white ;
+    border-radius: 12px;
+}
+
+.cardsexpensive img{
+    height: 100%;
+    width:100%;
+    margin-bottom: 8px;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+.contentexpensive{
+    height:500px;
+    width:400px;
+    background-color:snow;
+    padding:30px;
+    margin:30px;
+    border-radius: 12px;
+    display: inline-flexbox;
+}
+.expensivecontainer{
+    display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  height:100vh;
+  width:100%;
+  background-image: url(wallpaper2wine.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.dropdown-search {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style the search input field */
+#search-box {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    z-index: 1;
+    max-height: 150px;
+    overflow-y: auto;
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style the search results within the dropdown */
+.dropdown-content a {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Change link color on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}

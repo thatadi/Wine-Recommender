@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CellarScout.com</title>
+    <link rel="stylesheet" type="text/css" href='../static/style.css'>
+    <link rel="icon" type="image/jpg" href="..static/wine-bottle.png">
+</head>
+<body>
+    <nav class="topbar">
+        <h1>CellarScout</h1>
+        <ul>
+            <li><a href="/main">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=adityaryaka@gmail.com">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <div class="cards">
+                <img src="../static/floyd.jpg" alt=""><br>
+                
+                    <div class="buttons">
+                        
+                        <button id="rated">Top Rated Wines</button>
+                    </div>
+               
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="cards">
+                <img src="../static/floyd.jpg" alt=""><br>
+                
+                    <div class="buttons">
+                        <button id="predict">Explore Your Pallete</button>
+                    </div>
+                
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="cards">
+                <img src="../static/floyd.jpg" alt=""><br>
+                 <div class="buttons">
+                    <button id="price">Most Expensive Wines</button>
+                 </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    <div class="botbar">
+        <p1>If you liked this website , Please leave a Like!</p1>
+       
+    </div>
+    <script>
+        document.getElementById("predict").onclick=function(){window.location.href="/prediction"}
+        document.getElementById("price").onclick=function(){window.location.href="/expensive"}
+        document.getElementById("rated").onclick=function(){window.location.href="/points"}
+    </script>
+</body>
+</html>

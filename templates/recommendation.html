@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CellarScout.com</title>
+    <link rel="stylesheet" type="text/css" href='../static/style.css'>
+    <link rel="icon" type="image/jpg" href="'../static/wine-bottle.png">
+</head>
+<body>
+    
+   
+    <div class="expensivecontainer">
+        
+        {% for i in range(0,5)%}
+        <div class="contentexpensive">
+            
+            <div class="cardsexpensive">
+                <img src="../static/floyd.jpg" alt=""><br>
+                
+                    <h4>{{data[i]}}</h4><br>
+                   
+                
+               
+            </div>
+            
+        </div>
+        {% endfor %}
+        
+        
+    </div>
+    <div class="botbar">
+        <p1>Designed by Aditya</p1>
+    </div>
+
+
+</body>
+</html>
